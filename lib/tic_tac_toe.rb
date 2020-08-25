@@ -1,5 +1,4 @@
 class TicTacToe
-<<<<<<< HEAD
   def initialize
     @board = Array.new(9, " ")
     @WIN_COMBINATIONS = WIN_COMBINATIONS
@@ -9,11 +8,6 @@ class TicTacToe
   end
   WIN_COMBINATIONS =
     [
-=======
-  def initialize(board = nil)
-    @board = board || Array.new(9, " ")
-    @WIN_COMBINATIONS = [
->>>>>>> 48092b2d870c43ee06939fb016c13af85b68752f
       [0,1,2],
       [3,4,5],
       [6,7,8],
@@ -23,20 +17,12 @@ class TicTacToe
       [0,4,8],
       [2,4,6]
     ]
-<<<<<<< HEAD
   def move(index, player)
     @board[index] = player
-=======
-
-  end
-  def WIN_COMBINATIONS
-    @WIN_COMBINATIONS
->>>>>>> 48092b2d870c43ee06939fb016c13af85b68752f
   end
   def current_player
     turn_count % 2 == 0 ? "X" : "O"
   end
-<<<<<<< HEAD
   def valid_move?(index)
     index.between?(0, 8) && !position_taken?(index)
   end
@@ -54,12 +40,6 @@ class TicTacToe
       turn
     end
   end
-=======
-
-  def turn_count
-    @board.count{|token| token == "X" || token == "O"}
-  end
->>>>>>> 48092b2d870c43ee06939fb016c13af85b68752f
 
   def display_board
     puts " #{@board[0]} | #{@board[1]} | #{@board[2]} "
@@ -78,28 +58,19 @@ class TicTacToe
     end
     return false
   end
-<<<<<<< HEAD
   def position_taken?(index)
-=======
-  def position_taken?
->>>>>>> 48092b2d870c43ee06939fb016c13af85b68752f
       !(@board[index].nil? || @board[index] == " ")
   end
   def full?
     ((@board.count("X") + @board.count("O")) == 9) ? true:false
   end
   def draw?
-<<<<<<< HEAD
     (full? && !(won?))? true:false
-=======
-    (full? && !(won?)? true:false
->>>>>>> 48092b2d870c43ee06939fb016c13af85b68752f
   end
   def over?
     (won? || draw? || full?)? true:false
   end
   def winner
-<<<<<<< HEAD
     won? ? (return @board[won?[0]]) : nil
   end
   def play
@@ -110,8 +81,4 @@ class TicTacToe
         puts "Cat's Game!"
       end
     end
-=======
-    won? ? (return board[won?[0]]) : nil
-  end
->>>>>>> 48092b2d870c43ee06939fb016c13af85b68752f
 end
